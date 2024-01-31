@@ -20,4 +20,12 @@ public class CalculatorTests
         //Assert
         Assert.Equal(15, result);
     }
+    [Fact]
+    public void ShouldSubtract15With5AndReturns10()
+    {
+        int num1=15;
+        int num2=5;
+        int result = _calculator.Subtraction(num1, num2);
+        Assert.Equal(10, result);
+    }
 }
