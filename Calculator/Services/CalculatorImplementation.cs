@@ -6,5 +6,9 @@ namespace Calculator.Services
         {
             return sum1 + sum2;
         }
+        public int Subtraction(int num1, int num2)
+        {
+            return num1 - num2;
+        }
     }
 }
