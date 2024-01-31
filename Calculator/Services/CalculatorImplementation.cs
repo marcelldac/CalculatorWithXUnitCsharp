@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Calculator.Services
 {
     public class CalculatorImplementation
@@ -9,6 +11,10 @@ namespace Calculator.Services
         public int Subtraction(int num1, int num2)
         {
             return num1 - num2;
+        }
+        public bool isOdd(int num)
+        {
+            return num % 2 == 0;
         }
     }
 }
