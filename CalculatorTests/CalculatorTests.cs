@@ -28,11 +28,10 @@ public class CalculatorTests
         int result = _calculator.Subtraction(num1, num2);
         Assert.Equal(10, result);
     }
-    [Fact]
-    public void ShouldVerifyIf4IsOddAndReturnTrue()
+    [Theory]
+    [InlineData(new int[] {2, 4, 6, 8, 10})]
+    public void ShouldVerifyIfNumbersAreOddAndReturnsTrue(int[] numbers)
     {
-        int num = 4;
-        bool result = _calculator.isOdd(num);
-        Assert.True(result);
+        Assert.All(numbers, number => Assert.True(_calculator.isOdd(number)));
     }
 }
